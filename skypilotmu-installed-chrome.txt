@@ -1,7 +1,7 @@
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/global/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/communicator/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/editor/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/messenger/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/navigator/
-skin,install,url,jar:resource:/chrome/skypilotmu.jar!/chatzilla/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/global/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/communicator/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/editor/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/messenger/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/navigator/
+skin,install,url,jar:resource:/chrome/skypilotm12u.xpi!/chatzilla/
