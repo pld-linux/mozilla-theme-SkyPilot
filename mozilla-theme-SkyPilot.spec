@@ -7,7 +7,7 @@ License:        GPL
 Group:          X11/Applications/Networking
 Source0:        http://downloads.mozdev.org/themes/skypilotmu12.jar
 Source1:        skypilotmu12-installed-chrome.txt
-URL:            http://www0.mozdev.org/themes/skins/gold.html
+URL:            http://www0.mozdev.org/themes/skins/skypilot.html
 Requires:       mozilla >= 1.0
 BuildRoot:      %{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
