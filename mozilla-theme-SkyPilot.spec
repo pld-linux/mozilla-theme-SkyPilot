@@ -10,10 +10,11 @@ Group:		X11/Applications/Networking
 Source0:	http://downloads.mozdev.org/themes/%{_realname}.jar
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://www0.mozdev.org/themes/skins/skypilot.html
-Requires:	mozilla >= 1.0-7
-BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 Buildrequires:	unzip
 Buildrequires:	zip
+BuildArch:	noarch
+Requires:	mozilla >= 1.0-7
+BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_chromedir	%{_libdir}/mozilla/chrome
@@ -38,18 +39,17 @@ rm -rf $RPM_BUILD_ROOT%{_chromedir}/tmp/*/contents.rdf
 cd $RPM_BUILD_ROOT%{_chromedir}/tmp
 zip -9 -r $RPM_BUILD_ROOT%{_chromedir}/skypilotmu12.jar ./*
 rm -rf $RPM_BUILD_ROOT%{_chromedir}/tmp
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-%post
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+%post 
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
