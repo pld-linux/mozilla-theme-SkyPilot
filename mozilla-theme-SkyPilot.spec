@@ -9,7 +9,6 @@ License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}%{fver}.jar
 # Source0-md5:	7c9e5c33a165072dbe428fad40370881
-# Source0-size:	1248586
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/skypilot.html
 Requires(post,postun):	textutils
