@@ -1,18 +1,18 @@
 Summary:	Unnofficial port of the best NN6.1 theme
 Summary(pl):	Nieoficjalny port najlepszego motywu dla NN6.1
 Name:		mozilla-theme-SkyPilot
-Version:	1.6
+Version:	1.9i
 %define	fver	%(echo %{version} | tr -d .)
-%define		_realname	skypilotmu
-Release:	1
+%define		_realname	skypilotm12u
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.us-east1.mozdev.org/themes/%{_realname}%{fver}.jar
-# Source0-md5:	91d1f4927c8cead7a9dd34a66170e758
+Source0:	http://downloads.uk1.mozdev.org/rsync/themes/themes/%{_realname}%{fver}.xpi
+# Source0-md5:	c8a23a6aa0129b6d37d815124f3cb3af
 Source1:	%{_realname}-installed-chrome.txt
-URL:		http://themes.mozdev.org/skins/skypilot.html
+URL:		http://themes.mozdev.org/themes/skypilot.html
 Requires(post,postun):	textutils
-Requires:	mozilla >= 1.0-7
+Requires:	mozilla >= 1.2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
@@ -33,7 +33,7 @@ Nawigator potrzebuje pilota".
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
 
-install %{SOURCE0}  $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
+install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.xpi
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
 %clean
