@@ -4,7 +4,7 @@ Name:		mozilla-theme-SkyPilot
 %define		_realname	skypilotm15u
 Version:	1.9jrc
 %define	fver	%(echo %{version} | tr -d .)
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}%{fver}.jar
