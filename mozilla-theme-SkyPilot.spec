@@ -13,7 +13,7 @@ Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}%{fver}.jar
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/skypilot.html
 Requires(post,postun):	textutils
-Requires:	mozilla >= 1.5
+Requires:	mozilla >= 5:1.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
