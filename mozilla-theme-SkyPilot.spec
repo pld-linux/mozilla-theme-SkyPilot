@@ -10,7 +10,8 @@ Source1:        skypilotmu12-installed-chrome.txt
 URL:            http://www0.mozdev.org/themes/skins/skypilot.html
 Requires:       mozilla >= 1.0
 BuildRoot:      %{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
-
+Buildrequires:	unzip
+Buildrequires:	zip
 %define         _prefix         /usr/X11R6
 %define         _chromedir      %{_libdir}/mozilla/chrome
 %define		_realname	skypilotmu12
@@ -26,7 +27,11 @@ Nawigator potrzebuje pilota".
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
-install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}
+unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_chromedir}/tmp
+rm -rf $RPM_BUILD_ROOT%{_chromedir}/tmp/*/contents.rdf
+cd $RPM_BUILD_ROOT%{_chromedir}/tmp
+zip -9 -r $RPM_BUILD_ROOT%{_chromedir}/skypilotmu12.jar ./*
+rm -rf $RPM_BUILD_ROOT%{_chromedir}/tmp
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
 %clean
