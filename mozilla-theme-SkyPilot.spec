@@ -7,8 +7,8 @@ Version:	1.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.mozdev.org/themes/%{_realname}%{fver}.jar
-# Source0-md5:	c38ad2b8870703462007541a031781c9
+Source0:	http://downloads.us-east1.mozdev.org/themes/%{_realname}%{fver}.jar
+# Source0-md5:	91d1f4927c8cead7a9dd34a66170e758
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/skins/skypilot.html
 Requires(post,postun):	textutils
