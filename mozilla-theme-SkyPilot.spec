@@ -1,13 +1,13 @@
 Summary:	Unnofficial port of the best NN6.1 theme
 Summary(pl):	Nieoficjalny port najlepszego tematu dla NN6.1
 Name:		mozilla-theme-SkyPilot
-Version:	1.5
+Version:	1.6
 %define	fver	%(echo %{version} | tr -d .)
-%define		_realname	skypilotmu%{fver}
+%define		_realname	skypilotmu
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.mozdev.org/themes/%{_realname}.jar
+Source0:	http://downloads.mozdev.org/themes/%{_realname}%{fver}.jar
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/skins/skypilot.html
 BuildArch:	noarch
@@ -32,7 +32,8 @@ Nawigator potrzebuje pilota".
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
 
-install %{SOURCE0} %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
+install %{SOURCE0}  $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
+install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
 %post 
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
