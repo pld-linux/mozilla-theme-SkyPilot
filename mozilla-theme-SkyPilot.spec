@@ -1,9 +1,9 @@
 Summary:	Unnofficial port of the best NN6.1 theme
 Summary(pl):	Nieoficjalny port najlepszego motywu dla NN6.1
 Name:		mozilla-theme-SkyPilot
+%define		_realname	skypilotm15u
 Version:	1.9jrc
 %define	fver	%(echo %{version} | tr -d .)
-%define		_realname	skypilotm15u
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
@@ -12,7 +12,6 @@ Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}%{fver}.jar
 # Source0-size:	1248586
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/skypilot.html
-BuildRequires:	unzip
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.5
 BuildArch:	noarch
