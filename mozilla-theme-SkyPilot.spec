@@ -4,13 +4,14 @@ Name:		mozilla-theme-SkyPilot
 Version:	1.9i
 %define	fver	%(echo %{version} | tr -d .)
 %define		_realname	skypilotm12u
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://downloads.uk1.mozdev.org/rsync/themes/themes/%{_realname}%{fver}.xpi
 # Source0-md5:	c8a23a6aa0129b6d37d815124f3cb3af
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/skypilot.html
+BuildRequires:	unzip
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.2.1
 BuildArch:	noarch
@@ -32,8 +33,9 @@ Nawigator potrzebuje pilota".
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
+unzip %{SOURCE0} %{_realname}%{fver}.jar -d $RPM_BUILD_ROOT%{_chromedir}
 
-install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.xpi
+mv -f $RPM_BUILD_ROOT%{_chromedir}/%{_realname}%{fver}.jar $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
 %clean
