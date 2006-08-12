@@ -32,7 +32,7 @@ Nawigator potrzebuje pilota".
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
-                                                                                                                 
+
 install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}/
 
