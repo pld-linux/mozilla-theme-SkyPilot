@@ -1,5 +1,5 @@
 Summary:	Unnofficial port of the best NN6.1 theme
-Summary(pl):	Nieoficjalny port najlepszego motywu dla NN6.1
+Summary(pl.UTF-8):   Nieoficjalny port najlepszego motywu dla NN6.1
 Name:		mozilla-theme-SkyPilot
 %define		_realname	skypilotm15u
 Version:	1.9jrc
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 SkyPilot - the winner of the best NN6.1 theme competition. Author's
 motto was "because every Navigator needs Pilot".
 
-%description -l pl
-ZwyciÍzca w konkursie Netscape na najlepszy motyw dla NN6.1.
-Motto jakie przy∂wieca≥o autorowi tego motywu to: "Poniewaø kaødy
+%description -l pl.UTF-8
+Zwyciƒôzca w konkursie Netscape na najlepszy motyw dla NN6.1.
+Motto jakie przy≈õwieca≈Ço autorowi tego motywu to: "Poniewa≈º ka≈ºdy
 Nawigator potrzebuje pilota".
 
 %prep
