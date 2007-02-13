@@ -1,5 +1,5 @@
 Summary:	Unnofficial port of the best NN6.1 theme
-Summary(pl.UTF-8):   Nieoficjalny port najlepszego motywu dla NN6.1
+Summary(pl.UTF-8):	Nieoficjalny port najlepszego motywu dla NN6.1
 Name:		mozilla-theme-SkyPilot
 %define		_realname	skypilotm15u
 Version:	1.9jrc
